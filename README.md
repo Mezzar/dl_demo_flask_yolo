@@ -1,6 +1,6 @@
 # Демо-проект Flask + YOLO5 detection
 
-Для курса DeepLearning, семестр 1 [https://stepik.org/course/101721/]
+Для курса Deep Learning School от МФТИ, часть 1 (провинутый поток)
 
 ## 1 Выбор фреймворка и модели для детектора
 
@@ -40,13 +40,13 @@ display = utils.notebook_init()
 
 Примеры работы детектора:
 
-<img src="http://188.120.245.52/static/img/demo1.jpg" width="700">
+<img src="https://raw.githubusercontent.com/Mezzar/dl_demo_flask_yolo/master/static/demo1.jpg" width="700">
 
-<img src="http://188.120.245.52/static/img/demo2.jpg" width="700">
+<img src="https://raw.githubusercontent.com/Mezzar/dl_demo_flask_yolo/master/static/demo2.jpg" width="700">
 
-<img src="http://188.120.245.52/static/img/demo3.jpg" width="700">
+<img src="https://raw.githubusercontent.com/Mezzar/dl_demo_flask_yolo/master/static/demo3.jpg" width="700">
 
-<img src="http://188.120.245.52/static/img/demo4.jpg" width="700">
+<img src="https://raw.githubusercontent.com/Mezzar/dl_demo_flask_yolo/master/static/demo4.jpg" width="700">
 
 YOLO5 предобучена на датасете COCO. Скачаем валидационный сет картинок COCO-2017 и посмотрим как хорошо модель его предсказывает.
 
@@ -59,7 +59,7 @@ torch.hub.download_url_to_file('https://ultralytics.com/assets/coco2017val.zip',
 
 Получим для классов такую confusion matrix:
 
-<img src="http://188.120.245.52/static/img/confusion_matrix.png">
+<img src="https://raw.githubusercontent.com/Mezzar/dl_demo_flask_yolo/master/static/confusion_matrix.png">
 
 Очень даже неплохо, учитывая, что используем довольно слабую модель из семейства YOLO. Классы модель не путает, распознает достаточно устойчиво. Основные ошибки - когда не опознает объект и обозначает его пиксели как бэкграунд.
 
@@ -92,11 +92,11 @@ torch.hub.download_url_to_file('https://ultralytics.com/assets/coco2017val.zip',
 
 Веб-демо проекта протестирована локально и на VDS сервере. Функционирует корректно. 
 
-<img src="http://188.120.245.52/static/img/screenshot_1.jpg">
+<img src="https://raw.githubusercontent.com/Mezzar/dl_demo_flask_yolo/master/static/screenshot_1.jpg">
 
-<img src="http://188.120.245.52/static/img/screenshot_5.jpg">
+<img src="https://raw.githubusercontent.com/Mezzar/dl_demo_flask_yolo/master/static/screenshot_5.jpg">
 
-<img src="http://188.120.245.52/static/img/screenshot_2.jpg">
+<img src="https://raw.githubusercontent.com/Mezzar/dl_demo_flask_yolo/master/static/screenshot_2.jpg">
 
 
 ## 7 Оформление демо для показа другим людям
@@ -105,4 +105,4 @@ torch.hub.download_url_to_file('https://ultralytics.com/assets/coco2017val.zip',
 
 Дополнителньый функционал: для наглядности и удобства использования добавил сохранение в cookie ссылок на 7 (число меняется в конфиге) последних обработанных изображения и компонент Bootstrap carousel для их просмотра. Чтобы пользователь мог видеть не только последнее обработанное изображение но и предыдущие.
 
-Демо-проект развернут на VDS-сервере. Доступ по URL http://188.120.245.52/
+Демо-проект был развернут на VDS-сервере.
